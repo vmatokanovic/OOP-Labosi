@@ -1,0 +1,16 @@
+C:\Users\Matokanovic\source\repos\Labosi6\Labosi6\bin\Debug\netcoreapp3.1\Labosi6.exe
+C:\Users\Matokanovic\source\repos\Labosi6\Labosi6\bin\Debug\netcoreapp3.1\Labosi6.deps.json
+C:\Users\Matokanovic\source\repos\Labosi6\Labosi6\bin\Debug\netcoreapp3.1\Labosi6.runtimeconfig.json
+C:\Users\Matokanovic\source\repos\Labosi6\Labosi6\bin\Debug\netcoreapp3.1\Labosi6.runtimeconfig.dev.json
+C:\Users\Matokanovic\source\repos\Labosi6\Labosi6\bin\Debug\netcoreapp3.1\Labosi6.dll
+C:\Users\Matokanovic\source\repos\Labosi6\Labosi6\bin\Debug\netcoreapp3.1\Labosi6.pdb
+C:\Users\Matokanovic\source\repos\Labosi6\Labosi6\obj\Debug\netcoreapp3.1\Labosi6.csprojAssemblyReference.cache
+C:\Users\Matokanovic\source\repos\Labosi6\Labosi6\obj\Debug\netcoreapp3.1\Labosi6.Form1.resources
+C:\Users\Matokanovic\source\repos\Labosi6\Labosi6\obj\Debug\netcoreapp3.1\Labosi6.csproj.GenerateResource.cache
+C:\Users\Matokanovic\source\repos\Labosi6\Labosi6\obj\Debug\netcoreapp3.1\Labosi6.AssemblyInfoInputs.cache
+C:\Users\Matokanovic\source\repos\Labosi6\Labosi6\obj\Debug\netcoreapp3.1\Labosi6.AssemblyInfo.cs
+C:\Users\Matokanovic\source\repos\Labosi6\Labosi6\obj\Debug\netcoreapp3.1\Labosi6.csproj.CoreCompileInputs.cache
+C:\Users\Matokanovic\source\repos\Labosi6\Labosi6\obj\Debug\netcoreapp3.1\Labosi6.dll
+C:\Users\Matokanovic\source\repos\Labosi6\Labosi6\obj\Debug\netcoreapp3.1\Labosi6.pdb
+C:\Users\Matokanovic\source\repos\Labosi6\Labosi6\obj\Debug\netcoreapp3.1\Labosi6.genruntimeconfig.cache
+C:\Users\Matokanovic\source\repos\Labosi6\Labosi6\obj\Debug\netcoreapp3.1\Labosi6.Properties.Resources.resources
