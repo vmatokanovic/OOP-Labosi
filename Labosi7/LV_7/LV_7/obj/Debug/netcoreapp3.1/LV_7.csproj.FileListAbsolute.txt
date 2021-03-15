@@ -1,0 +1,13 @@
+C:\Users\Matokanovic\Desktop\OOP_labosi\Labosi7\LV_7\LV_7\bin\Debug\netcoreapp3.1\LV_7.exe
+C:\Users\Matokanovic\Desktop\OOP_labosi\Labosi7\LV_7\LV_7\bin\Debug\netcoreapp3.1\LV_7.deps.json
+C:\Users\Matokanovic\Desktop\OOP_labosi\Labosi7\LV_7\LV_7\bin\Debug\netcoreapp3.1\LV_7.runtimeconfig.json
+C:\Users\Matokanovic\Desktop\OOP_labosi\Labosi7\LV_7\LV_7\bin\Debug\netcoreapp3.1\LV_7.runtimeconfig.dev.json
+C:\Users\Matokanovic\Desktop\OOP_labosi\Labosi7\LV_7\LV_7\bin\Debug\netcoreapp3.1\LV_7.dll
+C:\Users\Matokanovic\Desktop\OOP_labosi\Labosi7\LV_7\LV_7\bin\Debug\netcoreapp3.1\LV_7.pdb
+C:\Users\Matokanovic\Desktop\OOP_labosi\Labosi7\LV_7\LV_7\obj\Debug\netcoreapp3.1\LV_7.csprojAssemblyReference.cache
+C:\Users\Matokanovic\Desktop\OOP_labosi\Labosi7\LV_7\LV_7\obj\Debug\netcoreapp3.1\LV_7.AssemblyInfoInputs.cache
+C:\Users\Matokanovic\Desktop\OOP_labosi\Labosi7\LV_7\LV_7\obj\Debug\netcoreapp3.1\LV_7.AssemblyInfo.cs
+C:\Users\Matokanovic\Desktop\OOP_labosi\Labosi7\LV_7\LV_7\obj\Debug\netcoreapp3.1\LV_7.csproj.CoreCompileInputs.cache
+C:\Users\Matokanovic\Desktop\OOP_labosi\Labosi7\LV_7\LV_7\obj\Debug\netcoreapp3.1\LV_7.dll
+C:\Users\Matokanovic\Desktop\OOP_labosi\Labosi7\LV_7\LV_7\obj\Debug\netcoreapp3.1\LV_7.pdb
+C:\Users\Matokanovic\Desktop\OOP_labosi\Labosi7\LV_7\LV_7\obj\Debug\netcoreapp3.1\LV_7.genruntimeconfig.cache
