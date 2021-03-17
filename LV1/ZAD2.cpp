@@ -4,8 +4,8 @@
 
 using namespace std;
 
-class Complex{
-    friend Complex zbroji (Complex&, Complex&); // Prijateljska funkcija
+class Complex {
+    friend Complex zbroji(Complex&, Complex&); // Prijateljska funkcija
     friend double moduleOfComplex(Complex& referenca);  // Prijateljska funkcija
 private:
     double reDio;
@@ -13,47 +13,42 @@ private:
 public:
     Complex(double reDio, double imagDio);
     Complex();
-    void setComplex(double mReDio, double mImagDio){
+    void setComplex(double mReDio, double mImagDio) {
         reDio = mReDio;
         imagDio = mImagDio;
-        cout << "Postavili ste vrijednost kompleksnog broja: z = " << reDio << "+" << imagDio << "i" << endl;
     }
-    double getComplex(){
-        cout << "Realni dio: " << reDio << " ,a imaginarni dio: " << imagDio << endl;
-        return reDio, imagDio;}
+    double getComplex() {
+        return reDio, imagDio;
+    }
 
 };
 
-double moduleOfComplex(Complex& referenca){
+double moduleOfComplex(Complex& const referenca) {
     double modul = sqrt((referenca.reDio * referenca.reDio) + (referenca.imagDio * referenca.imagDio));
     return modul;
 }
 
-Complex zbroji(Complex& ref1, Complex& ref2){
-    Complex result;
-    result.reDio = ref1.reDio + ref2.reDio;
-    result.imagDio = ref1.imagDio + ref2.imagDio;
+Complex zbroji(Complex& const ref1, Complex& const ref2) {
+    double real;
+    double imag;
+    real = ref1.reDio + ref2.reDio;
+    imag = ref1.imagDio + ref2.imagDio;
+    Complex result(real, imag);
     return result;
 }
 
-Complex::Complex(double mReDio, double mImagDio){
-    reDio = mReDio;
-    imagDio = mImagDio;
-}
+Complex::Complex(double mReDio, double mImagDio) :reDio(mReDio), imagDio(mImagDio) { }
 
-Complex::Complex(){
-    reDio = 1;
-    imagDio = 1;
-}
+Complex::Complex() : reDio(1), imagDio(1) {}
 
 int main()
 {
     Complex prviKomplBroj;
-    prviKomplBroj.setComplex(7,3);
+    prviKomplBroj.setComplex(7, 3);
     prviKomplBroj.getComplex();
     cout << moduleOfComplex(prviKomplBroj) << endl;
 
-    Complex drugKomplBroj(10,8);
+    Complex drugKomplBroj(10, 8);
     drugKomplBroj.getComplex();
     cout << moduleOfComplex(drugKomplBroj) << endl;
 

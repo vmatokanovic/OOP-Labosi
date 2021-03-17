@@ -5,38 +5,34 @@
 
 using namespace std;
 
-class Die{  //kockica
+class Die {  //kockica
     friend int isJamb(Die refPolje[]);
 private:
     int broj;
 public:
-    Die (int aBroj);
-    Die ();
-    void setBroj(int aBroj){    //metoda za postavljanje vrijednosti kockice
+    Die(int aBroj);
+    Die();
+    void setBroj(int aBroj) {    //metoda za postavljanje vrijednosti kockice
         broj = aBroj;
-        cout << "Postavili ste vrijednost kockice na: " << broj << endl;
     }
-    int getBroj(){ return broj;}    //metoda za pristup vrijednosti kockice
-    void baciKockice();
+    int getBroj() { return broj; }    //metoda za pristup vrijednosti kockice
+    void baciKockicu();
 };
 
-void Die::baciKockice(){    //funkcija za bacanje kockice random broj od 1-6
+void Die::baciKockicu() {    //funkcija za bacanje kockice random broj od 1-6
     broj = rand() % 6 + 1;
     cout << "Broj koji ste dobili bacanjem te kockice je: " << broj << endl;
 }
 
-Die::Die (int aBroj){   //parametarski konstruktor
-    broj = aBroj;
-}
+Die::Die(int aBroj):broj(aBroj) { }
 
-Die::Die(){  //defaultni konstruktor
-    broj = 1;
-}
+Die::Die():broj(1) { }
 
-int isJamb(Die refPolje[]){
-    int prvaKock = refPolje[0].broj;
-    for(int i = 0; i < 6; i++){
-        if(prvaKock != refPolje[i].broj){
+int isJamb(Die refPolje[], int size) {
+    int n = size;
+    int prvaKock = refPolje[0].getBroj();
+    for (int i = 0; i < n; i++) {
+        if (prvaKock != refPolje[i].getBroj()) {
             return 0;
         }
     }
@@ -46,22 +42,23 @@ int isJamb(Die refPolje[]){
 int main()
 {
     srand(time(0));
-
-    Die poljeKockica[5], i;
-    for(int i = 0; i < 6; i++){ //kreirano polje kockica s random bacanjima
-        poljeKockica[i].baciKockice();
+    int const n = 5;
+    Die poljeKockica[n], i;
+    for (int i = 0; i < n; i++) { //kreirano polje kockica s random bacanjima
+        poljeKockica[i].baciKockicu();
         cout << "Vrijednost kockice: " << poljeKockica[i].getBroj() << endl;
     }
 
-    if(isJamb(poljeKockica)){   //koristenje funkcije za provjeru je li jamb
+    if (isJamb(poljeKockica, n)) {   //koristenje funkcije za provjeru je li jamb
         cout << "Dobili ste jamb! Cestitamo!" << endl;
-    } else {
+    }
+    else {
         cout << "Niste dobili jamb, nazalost." << endl;
     }
 
     cout << endl;
     Die plava;  //koristenje defaultnog konstruktora
-    plava.baciKockice();    //koristenje funkcije za bacanje kockice za plavu kockicu
+    plava.baciKockicu();    //koristenje funkcije za bacanje kockice za plavu kockicu
     plava.setBroj(4);   //koristenje settera
 
     return 0;

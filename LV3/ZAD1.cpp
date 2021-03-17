@@ -6,62 +6,62 @@ using namespace std;
 class prepaid_kartica
 {
 protected:
-    float iznos;
+    double iznos;
 public:
     prepaid_kartica()
     {
         iznos = 0;
     }
-    prepaid_kartica (float izn)
+    prepaid_kartica(double izn)
     {
         iznos = izn;
     }
-    void setIznos(float izn)
+    void setIznos(double izn)
     {
         iznos = izn;
     }
-    float getIznos()    {return iznos;}
+    float getIznos() { return iznos; }
     //Metode:
-    void NadoplatiRacun(float izn)
+    void NadoplatiRacun(double izn)
     {
         iznos = iznos + izn;
         cout << "Racun je nadoplacen s iznosom od: " << izn << " kn." << endl;
     }
-    void ProvjeraStanja()
+    double ProvjeraStanja()
     {
-        cout << "Stanje na racunu je: " << iznos << " kn." << endl;
+        return iznos;
     }
-    virtual void PosaljiSMS()=0;
+    virtual void PosaljiSMS() = 0;
 };
 
 class tele2_kartica : public prepaid_kartica
 {
 protected:
-    float cijena_SMS;
+    double cijena_SMS;
 public:
     tele2_kartica()
     {
         iznos = 0;
         cijena_SMS = 0;
     }
-    tele2_kartica (float izn, float mCijena_SMS) : prepaid_kartica(izn)
+    tele2_kartica(double izn, double mCijena_SMS) : prepaid_kartica(izn)
     {
         cijena_SMS = mCijena_SMS;
     }
     virtual void PosaljiSMS()
     {
         iznos = iznos - cijena_SMS;
-        cout << "SMS je poslan po cijeni od: " << cijena_SMS << " kn."<< endl;
+        cout << "SMS je poslan po cijeni od: " << cijena_SMS << " kn." << endl;
     }
 };
 
 int main()
 {
     tele2_kartica Kartica(20, 0.75);
-    Kartica.ProvjeraStanja();
-    Kartica.NadoplatiRacun(25);
-    Kartica.ProvjeraStanja();
-    prepaid_kartica *pokazivac;
+    cout << "Iznos na racunu je: " << Kartica.ProvjeraStanja() << " kn." << endl;
+    Kartica.NadoplatiRacun(25.74);
+    cout << "Iznos na racunu je: " << Kartica.ProvjeraStanja() << " kn." << endl;
+    prepaid_kartica* pokazivac;
     pokazivac = &Kartica;
     pokazivac->PosaljiSMS();
     pokazivac->ProvjeraStanja();

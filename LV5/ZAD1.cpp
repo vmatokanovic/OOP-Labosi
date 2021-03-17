@@ -5,16 +5,18 @@
 
 using namespace std;
 
-class GeoIznimka : public exception{
-float a, b, c;
+class GeoIznimka : public exception {
+    float a, b, c;
 public:
-    const char* what(){
-    return "TROKUT NIJE MOGUC!";
+    const char* what() {
+        return "TROKUT NIJE MOGUC!";
     }
-    void getStranice(){
+    void getStranice() {
         cout << "Trokut sa stranicama " << a << ", " << b << ", " << c << ", nije moguc." << endl;
     }
-    void setStranice(float a, float b, float c){
+    GeoIznimka(float A, float B, float C) :a(A), b(B), c(c) { }
+
+    void setStranice(float a, float b, float c) {
         this->a = a;
         this->b = b;
         this->c = c;
@@ -38,8 +40,7 @@ public:
     {
         if (A < 0 || B < 0 || C < 0 || (A + B <= C) || A + C <= B || B + C <= A)
         {
-            GeoIznimka g;
-            g.setStranice(A, B, C);
+            GeoIznimka g(A, B, C);
             throw g;
         }
         a = A;
@@ -52,9 +53,9 @@ public:
         b = B;
         c = C;
     }
-    float getStranicaA()    {return a;}
-    float getStranicaB()    {return b;}
-    float getStranicaC()    {return c;}
+    float getStranicaA() { return a; }
+    float getStranicaB() { return b; }
+    float getStranicaC() { return c; }
     //Metode:
 
     float Opseg()
@@ -64,15 +65,20 @@ public:
     float Povrsina()
     {
         float s = (a + b + c) / 2;
-        return sqrt(s * (s - a) *  (s - b) * (s - c));
+        return sqrt(s * (s - a) * (s - b) * (s - c));
     }
-    void Pravokutan()
+    bool isRight()
     {
-        if (a*a == (b*b + c*c) or b*b == (a*a + c*c)
-             or c*c == (a*a + b*b))
-            cout << "Trokut je pravokutan." << endl;
+        if (a * a == (b * b + c * c) or b * b == (a * a + c * c)
+            or c * c == (a * a + b * b))
+        {
+            return true;
+        }
         else
-            cout << "Trokut nije pravokutan." << endl;
+        {
+            return false;
+        }
+
     }
 };
 
@@ -85,17 +91,17 @@ int main()
         Trokut trokut2(4, 4, 4);
         cout << "Opseg 1. trokuta je: " << trokut1.Opseg() << endl;
         cout << "Opseg 2. trokuta je: " << trokut2.Opseg() << endl;
-        if(trokut1.Povrsina() < trokut2.Povrsina()){
+        if (trokut1.Povrsina() < trokut2.Povrsina()) {
             cout << "Povrsina 1. trokuta je manja od povrsine 2. trokuta." << endl;
         }
-        else if(trokut1.Povrsina() > trokut2.Povrsina()){
+        else if (trokut1.Povrsina() > trokut2.Povrsina()) {
             cout << "Povrsina 1. trokuta je veca od povrsine 2. trokuta." << endl;
         }
-        else{
+        else {
             cout << "Povrsina 1. trokuta je jednaka povrsini 2. trokuta." << endl;
         }
     }
-    catch(GeoIznimka g)
+    catch (GeoIznimka g)
     {
         g.getStranice();
     }
